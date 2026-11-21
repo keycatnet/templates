@@ -7,5 +7,5 @@ import type { PricedLine } from "./cart";
 export const MAX_QUANTITY = 99;
 
 export function lineName(line: PricedLine): string {
-  return line.variant.id === "default" ? line.product.title : `${line.product.title} — ${line.variant.title}`;
+  return line.variant.id === "default" ? line.product.title : `${line.product.title}, ${line.variant.title}`;
 }

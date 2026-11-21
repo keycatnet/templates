@@ -9,8 +9,8 @@ export default async function HomePage() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
       <section className="pt-10 pb-8 sm:pt-16">
-        <h1 className="max-w-2xl text-[clamp(2.25rem,6vw,3.75rem)] font-semibold tracking-display">Good things, paid for simply.</h1>
-        <p className="mt-4 max-w-xl text-lg text-label-secondary">Check out with USDC or other stablecoins from any wallet or exchange, on any chain. It settles in seconds.</p>
+        <h1 className="max-w-2xl text-[clamp(2.25rem,6vw,3.75rem)] font-semibold tracking-display">Good things, easy to pay for.</h1>
+        <p className="mt-4 max-w-xl text-lg text-label-secondary">Pay by card, or in the coin you hold from any wallet or exchange. Most payments settle within a minute.</p>
       </section>
 
       {hero ? (

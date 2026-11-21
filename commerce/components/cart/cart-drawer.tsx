@@ -84,7 +84,7 @@ function CartBody({ onNavigate }: { onNavigate: () => void }) {
         <div className="mb-1 flex justify-between text-label-secondary"><span>Shipping</span><span>Free</span></div>
         <div className="mb-4 flex justify-between text-lg font-semibold"><span>Total</span><span>{formatPrice(cart.total)}</span></div>
         <CheckoutButton />
-        <p className="mt-3 text-center text-sm text-label-tertiary">Pay with USDC or other stablecoins from any chain.</p>
+        <p className="mt-3 text-center text-sm text-label-tertiary">Pay by card, or in the coin you hold.</p>
       </footer>
     </>
   );

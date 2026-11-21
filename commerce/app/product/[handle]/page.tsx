@@ -49,7 +49,7 @@ export default async function ProductPage({ params }: Props) {
           <p className="max-w-prose text-label-secondary">{product.description}</p>
           <ul className="space-y-1 text-sm text-label-secondary">
             <li>Free shipping on every order</li>
-            <li>Pay with stablecoins from any chain</li>
+            <li>Pay by card, or in the coin you hold</li>
           </ul>
         </div>
       </div>

@@ -1,7 +1,7 @@
 /**
  * The public HTTPS origin Keycat should send customers back to after paying.
  * Keycat accepts only HTTPS redirects, so local development gets none and the
- * customer simply stays on the Keycat receipt.
+ * customer stays on the Keycat receipt.
  */
 export function siteUrl(): string | undefined {
   const configured = process.env.NEXT_PUBLIC_SITE_URL

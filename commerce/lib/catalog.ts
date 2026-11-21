@@ -63,8 +63,8 @@ const PRODUCTS: Product[] = [
     image: "/products/socks.svg",
     tint: "#E6F4EA",
     variants: [
-      { id: "s-m", title: "S–M", price: "14.00", available: true },
-      { id: "l-xl", title: "L–XL", price: "14.00", available: true },
+      { id: "s-m", title: "S/M", price: "14.00", available: true },
+      { id: "l-xl", title: "L/XL", price: "14.00", available: true },
     ],
   },
   {
