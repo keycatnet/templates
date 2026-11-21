@@ -58,7 +58,8 @@ set up until `KEYCAT_API_KEY` exists.
 | `KEYCAT_WEBHOOK_SECRET` | For fulfilment | Verifies webhook deliveries (`whsec_…`). |
 | `NEXT_PUBLIC_SITE_URL` | No | Public HTTPS origin for the after-payment redirect. On Vercel the production domain is used when unset. |
 | `NEXT_PUBLIC_STORE_NAME` | No | Shown in the header, footer, and page titles. |
-| `KEYCAT_API_BASE_URL` | No | A local Keycat API Worker, for development. |
+| `KEYCAT_API_BASE_URL` | No | A local Keycat API, for development. |
+| `KEYCAT_DEMO_STORE` | No | Set to `1` for a public demo: a banner says so and checkout is turned off, so nobody pays for products that do not exist. |
 
 ## Make it yours
 

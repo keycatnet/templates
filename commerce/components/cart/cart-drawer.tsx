@@ -6,6 +6,7 @@ import { Suspense, useActionState, useEffect, useRef, useTransition } from "reac
 import { checkout, setQuantity } from "@/lib/actions";
 import type { PricedLine } from "@/lib/cart";
 import { lineName, MAX_QUANTITY } from "@/lib/cart-display";
+import { DEPLOY_URL } from "@/lib/demo";
 import { formatPrice } from "@/lib/money";
 import { useCart, useCartControls } from "./cart-context";
 
@@ -125,7 +126,8 @@ function CheckoutButton() {
       <button type="submit" disabled={pending} className="press w-full rounded-full bg-accent py-3.5 font-semibold text-accent-contrast disabled:opacity-60">
         {pending ? "Starting checkout…" : "Check out"}
       </button>
-      {state?.error ? <p role="alert" className="mt-3 text-center text-sm text-danger">{state.error}</p> : null}
+      {state?.error ? <p role="alert" className={`mt-3 text-center text-sm ${state.demo ? "text-label-secondary" : "text-danger"}`}>{state.error}</p> : null}
+      {state?.demo ? <a href={DEPLOY_URL} className="press mt-3 block text-center text-sm font-medium text-accent hover:underline" rel="noopener">Deploy your own</a> : null}
     </form>
   );
 }

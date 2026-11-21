@@ -4,6 +4,7 @@ import { KeycatApiError, KeycatConnectionError, type Charge } from "@keycatpay/s
 import { redirect } from "next/navigation";
 import { newCartId, normalizeLines, priceCart, type Cart, type CartLine } from "./cart";
 import { lineName } from "./cart-display";
+import { isDemoStore } from "./demo";
 import { keycat } from "./keycat";
 import { siteUrl } from "./site";
 import { readCart, readOrder, writeCart, writeOrder } from "./session";
@@ -32,7 +33,8 @@ const open = (charge: Charge) => charge.status === "open" && (!charge.expires_at
  * Creates a Keycat charge for the cart and sends the customer to Keycat's
  * hosted checkout. Returns an error message instead when it cannot.
  */
-export async function checkout(): Promise<{ error: string }> {
+export async function checkout(): Promise<{ error: string; demo?: boolean }> {
+  if (isDemoStore()) return { error: "This is a demo store, so checkout is turned off. Deploy your own copy to take real payments.", demo: true };
   const client = keycat();
   if (!client) return { error: "Payments are not set up yet. Add KEYCAT_API_KEY to this deployment." };
 

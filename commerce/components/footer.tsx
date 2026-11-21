@@ -7,7 +7,7 @@ export function Footer({ storeName }: { storeName: string }) {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-3 sm:px-6">
         <div>
           <p className="font-semibold text-label">{storeName}</p>
-          <p className="mt-2 max-w-xs">Payments settle in USDC on Base, straight to the store. No card network, no chargebacks.</p>
+          <p className="mt-2 max-w-xs">Pay by card or in the coin you hold. Payments settle in USDC on Base, straight to the store.</p>
         </div>
         <ul className="flex flex-col gap-2">
           {COLLECTIONS.map((collection) => (

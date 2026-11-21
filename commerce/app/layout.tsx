@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { CartProvider } from "@/components/cart/cart-context";
 import { Footer } from "@/components/footer";
+import { DemoBanner } from "@/components/demo-banner";
 import { Navbar } from "@/components/navbar";
 import { priceCart } from "@/lib/cart";
 import { readCart } from "@/lib/session";
@@ -13,7 +14,7 @@ const name = process.env.NEXT_PUBLIC_STORE_NAME || "Keycat Store";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl() ?? "http://localhost:3000"),
   title: { default: name, template: `%s · ${name}` },
-  description: "A storefront that takes stablecoin payments from any chain, settled in USDC on Base with Keycat.",
+  description: "A storefront that takes payments by card or in any coin, settled in USDC on Base with Keycat.",
 };
 
 export const viewport: Viewport = {
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="flex min-h-dvh flex-col">
         <CartProvider cart={cart}>
+          <DemoBanner />
           <Navbar storeName={name} />
           <main className="flex-1">{children}</main>
           <Footer storeName={name} />
